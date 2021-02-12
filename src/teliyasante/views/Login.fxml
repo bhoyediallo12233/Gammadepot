@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teliyasante.controllers.LoginController">
+    
+      <children>
+      <Pane fx:id="content" prefHeight="365.0" prefWidth="611.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="101.0" layoutY="37.0" text="Teliya Login" textFill="#070707">
+               <font>
+                  <Font name="Berlin Sans FB" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="73.0" layoutY="64.0" text="make sure your account is secure" textFill="#6f6a6a">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" layoutX="331.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" style="-fx-background-color: transparent; -fx-border-color: #E1E1E1; -fx-border-radius: 50px;">
+               <children>
+                  <TextField fx:id="txt_user_name" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#Saisie" prefHeight="35.0" prefWidth="221.0" promptText="User name" style="-fx-background-color: transparent;" />
+                  <FontAwesomeIcon fill="#515050" iconName="USER" size="1.3em" />
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="331.0" layoutY="165.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" style="-fx-background-color: transparent; -fx-border-color: #E1E1E1; -fx-border-radius: 50px;">
+               <children>
+                  <PasswordField fx:id="txt_user_passw" onMouseClicked="#Saisie" prefHeight="35.0" prefWidth="218.0" promptText="User password" style="-fx-background-color: transparent;" />
+                  <FontAwesomeIcon fill="#656565" iconName="LOCK" size="1.3em" />
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+            <Label layoutX="331.0" layoutY="217.0" text="Mot de passe oubllier ?" textFill="#8d8989" visible="false">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="bt_login" layoutX="331.0" layoutY="264.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#login_user" prefHeight="46.0" prefWidth="260.0" style="-fx-background-color: #27a244; -fx-background-radius: 50px;" text="Login" textFill="#fcf9f9">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></JFXButton>
+            <JFXComboBox fx:id="cb_kind_user" layoutX="14.0" layoutY="100.0" onAction="#Activer_les_champs" prefHeight="25.0" prefWidth="299.0" promptText="Kind of User" />
+            <Label fx:id="lb_version" layoutX="14.0" layoutY="310.0" prefHeight="17.0" prefWidth="197.0" text="Label" />
+         </children>
+      </Pane>
+   </children>
+  
+</AnchorPane>
